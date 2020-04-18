@@ -6,7 +6,7 @@ var server = app.listen(3000, function(){
 });
 
 app.use(function (req, res, next) {
-  res.setHeader("Cache-Control", ["private", "max-age=60"].join(','));
+  res.setHeader("Cache-Control", ["max-age=10"].join(','));
 	next();
 });
 
