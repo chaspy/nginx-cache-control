@@ -1,11 +1,9 @@
 version: "3.7"
 services:
   web:
-    build:
-      context: .
-      dockerfile: ./Dockerfile-nginx
+    build: ./nginx
     volumes:
-     - ./conf/default.conf:/etc/nginx/conf.d/default.conf
+     - ./nginx/conf/default.conf:/etc/nginx/conf.d/default.conf
     ports:
      - "8080:80"
   node:
